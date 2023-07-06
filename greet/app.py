@@ -1,2 +1,14 @@
 from flask import Flask
-app = FLASK(__name__)
+app = Flask(__name__)
+
+@app.route('/welcome')
+def welcome_msg():
+    return "Welcome"
+
+@app.route('/welcome/home')
+def welcome_home():
+    return "Welcome Home"
+
+@app.route('/welcome/back')
+def welcome_back():
+    return "Welcome Back"
